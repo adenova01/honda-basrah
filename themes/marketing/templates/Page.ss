@@ -4,6 +4,26 @@
 <head>
     <% base_tag %>
     <% include Head %>
+    <style>
+        .float{
+            position:fixed;
+            width:60px;
+            height:60px;
+            bottom:40px;
+            left:40px;
+            background-color:#25d366;
+            color:#FFF;
+            border-radius:50px;
+            text-align:center;
+            font-size:30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index:100;
+        }
+
+        .my-float{
+            margin-top:16px;
+        }
+    </style>
 </head>
 
 <body>
@@ -15,7 +35,9 @@
 
 
     <!-- Topbar Start -->
-    <% include Topbar %>
+    <% if $ShowBanner %>
+        <% include Topbar %>
+    <% end_if %>
     <!-- Topbar End -->
 
 
@@ -23,7 +45,9 @@
     <div class="container-fluid position-relative p-0">
         <% include Navbar %>
 
-        <% include Slider %>
+        <% if $ShowBanner %>
+            <% include Slider %>
+        <% end_if %>
     </div>
     <!-- Navbar & Carousel End -->
 
@@ -48,7 +72,7 @@
 
 
     <!-- Facts Start -->
-    <div class="container-fluid facts py-5 pt-lg-0">
+    <%-- <div class="container-fluid facts py-5 pt-lg-0">
         <div class="container py-5 pt-lg-0">
             <div class="row gx-0">
                 <div class="col-lg-4 wow zoomIn" data-wow-delay="0.1s">
@@ -68,8 +92,8 @@
                             <i class="fa fa-check text-white"></i>
                         </div>
                         <div class="ps-4">
-                            <h5 class="text-primary mb-0">Projects Done</h5>
-                            <h1 class="mb-0" data-toggle="counter-up">12345</h1>
+                            <h5 class="text-primary mb-0">Product</h5>
+                            <h1 class="mb-0" data-toggle="counter-up">$Product.Count</h1>
                         </div>
                     </div>
                 </div>
@@ -86,7 +110,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --%>
     <!-- Facts Start -->
 
 
@@ -100,6 +124,10 @@
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <a href="https://api.whatsapp.com/send?phone=62895326339070&text=Halo Rizal saya ingin mencari mobil." class="float" target="_blank">
+        <i class="fab fa-whatsapp my-float"></i>
+    </a>
 
 
     <!-- JavaScript Libraries -->

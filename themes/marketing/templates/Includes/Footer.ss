@@ -3,10 +3,10 @@
         <div class="row gx-5">
             <div class="col-lg-4 col-md-6 footer-about">
                 <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-4">
-                    <a href="index.html" class="navbar-brand">
-                        <h1 class="m-0 text-white"><i class="fa fa-user-tie me-2"></i>Startup</h1>
+                    <a href="#" class="navbar-brand">
+                        <h1 class="m-0 text-white"></h1>
                     </a>
-                    <p class="mt-3 mb-4">Lorem diam sit erat dolor elitr et, diam lorem justo amet clita stet eos sit. Elitr dolor duo lorem, elitr clita ipsum sea. Diam amet erat lorem stet eos. Diam amet et kasd eos duo.</p>
+                    <p class="mt-3 mb-4">$getAboutUsContent</p>
                     <form action="">
                         <div class="input-group">
                             <input type="text" class="form-control border-white p-3" placeholder="Your Email">
@@ -47,9 +47,7 @@
                         <div class="link-animated d-flex flex-column justify-content-start">
                             <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
                             <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
-                            <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Our Services</a>
-                            <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Meet The Team</a>
-                            <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Latest Blog</a>
+                            <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Product</a>
                             <a class="text-light" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
                         </div>
                     </div>
@@ -58,12 +56,10 @@
                             <h3 class="text-light mb-0">Popular Links</h3>
                         </div>
                         <div class="link-animated d-flex flex-column justify-content-start">
-                            <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
-                            <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
-                            <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Our Services</a>
-                            <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Meet The Team</a>
-                            <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Latest Blog</a>
-                            <a class="text-light" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
+                        <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+                    <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
+                    <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Product</a>
+                    <a class="text-light" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
                         </div>
                     </div>
                 </div>
@@ -76,10 +72,10 @@
         <div class="row justify-content-end">
             <div class="col-lg-8 col-md-6">
                 <div class="d-flex align-items-center justify-content-center" style="height: 75px;">
-                    <p class="mb-0">&copy; <a class="text-white border-bottom" href="#">Your Site Name</a>. All Rights Reserved.
+                    <p class="mb-0">&copy; <a class="text-white border-bottom" href="#">$SiteConfig.Title</a>. All Rights Reserved.
 
                     <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                    Designed by <a class="text-white border-bottom" href="https://htmlcodex.com">HTML Codex</a></p>
+                    <%-- Designed by <a class="text-white border-bottom" href="https://htmlcodex.com">HTML Codex</a></p> --%>
                 </div>
             </div>
         </div>

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "98813616e7005e4ab4458b611f842e97",
+    "content-hash": "c420b333fce91413243af2582345f821",
     "packages": [
         {
             "name": "bramus/ansi-php",
@@ -95,6 +95,62 @@
                 "source": "https://github.com/bramus/monolog-colored-line-formatter/tree/master"
             },
             "time": "2015-01-07T22:12:35+00:00"
+        },
+        {
+            "name": "buckleshusky/fontawesomeiconpicker",
+            "version": "2.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DoggersHusky/silverstripe-fa-picker.git",
+                "reference": "934eefa06a7fa2cb2c063d83187c49d7e1986672"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DoggersHusky/silverstripe-fa-picker/zipball/934eefa06a7fa2cb2c063d83187c49d7e1986672",
+                "reference": "934eefa06a7fa2cb2c063d83187c49d7e1986672",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "~4.0",
+                "silverstripe/vendor-plugin": "^1.0"
+            },
+            "type": "silverstripe-vendormodule",
+            "extra": {
+                "expose": [
+                    "css",
+                    "js",
+                    "javascript",
+                    "webfonts"
+                ]
+            },
+            "autoload": {
+                "psr-4": {
+                    "buckleshusky\\FontAwesomeIconPicker\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Buckles Husky",
+                    "homepage": "http://doggershusky.com"
+                }
+            ],
+            "description": "Adds a Font Awesome 5 icon picker for SilverStripe.",
+            "keywords": [
+                "FontAwesome",
+                "font awesome",
+                "icons",
+                "picker",
+                "silverstripe"
+            ],
+            "support": {
+                "issues": "https://github.com/DoggersHusky/silverstripe-fa-picker/issues",
+                "source": "https://github.com/DoggersHusky/silverstripe-fa-picker/tree/2.1.1"
+            },
+            "time": "2021-03-18T16:24:00+00:00"
         },
         {
             "name": "composer/ca-bundle",

@@ -29,5 +29,14 @@ namespace {
             // You can include any CSS or JS required by your project here.
             // See: https://docs.silverstripe.org/en/developer_guides/templates/requirements/
         }
+
+        public function getAboutUsContent()
+        {
+            $aboutUs = Page::get()->filter([
+                'ClassName' => 'AboutPage'
+            ])->first();
+
+            return str_replace(['<p>','</p>'], '', $aboutUs->Content);
+        }
     }
 }
