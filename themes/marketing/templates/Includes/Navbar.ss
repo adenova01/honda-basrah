@@ -10,13 +10,13 @@
             <a href="$BaseHref" class="nav-item nav-link <% if $Segment == '/' %> active <% end_if %>">Home</a>
             <a href="{$BaseHref}about-us" class="nav-item nav-link <% if $Segment == 'about' %> active <% end_if %>">About</a>
             <div class="nav-item dropdown">
-                <a href="#" class="nav-link">Produk</a>
+                <a href="#" class="nav-link">Katalog</a>
                 <%-- <div class="dropdown-menu m-0">
                     <a href="blog.html" class="dropdown-item">Blog Grid</a>
                     <a href="detail.html" class="dropdown-item">Blog Detail</a>
                 </div> --%>
             </div>
-            <div class="nav-item dropdown">
+            <div class="nav-item dropdown" style="display: none;">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                 <div class="dropdown-menu m-0">
                     <a href="price.html" class="dropdown-item">Pricing Plan</a>

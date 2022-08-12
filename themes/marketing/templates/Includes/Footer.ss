@@ -21,23 +21,23 @@
                         <div class="section-title section-title-sm position-relative pb-3 mb-4">
                             <h3 class="text-light mb-0">Get In Touch</h3>
                         </div>
-                        <div class="d-flex mb-2">
+                        <%-- <div class="d-flex mb-2">
                             <i class="bi bi-geo-alt text-primary me-2"></i>
                             <p class="mb-0">123 Street, New York, USA</p>
-                        </div>
+                        </div> --%>
                         <div class="d-flex mb-2">
                             <i class="bi bi-envelope-open text-primary me-2"></i>
-                            <p class="mb-0">info@example.com</p>
+                            <p class="mb-0">$SiteConfig.Email</p>
                         </div>
                         <div class="d-flex mb-2">
                             <i class="bi bi-telephone text-primary me-2"></i>
-                            <p class="mb-0">+012 345 67890</p>
+                            <p class="mb-0">$SiteConfig.Phone</p>
                         </div>
                         <div class="d-flex mt-4">
-                            <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-twitter fw-normal"></i></a>
-                            <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
-                            <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-linkedin-in fw-normal"></i></a>
-                            <a class="btn btn-primary btn-square" href="#"><i class="fab fa-instagram fw-normal"></i></a>
+                            <a class="btn btn-primary btn-square me-2" href="$SiteConfig.Twitter" target="_blank"><i class="fab fa-twitter fw-normal"></i></a>
+                            <a class="btn btn-primary btn-square me-2" href="$SiteConfig.Facebook" target="_blank"><i class="fab fa-facebook-f fw-normal"></i></a>
+                            <a class="btn btn-primary btn-square me-2" href="$SiteConfig.LinkedIn" target="_blank"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                            <a class="btn btn-primary btn-square me-2" href="$SiteConfig.Instagram" target="_blank"><i class="fab fa-instagram fw-normal"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">

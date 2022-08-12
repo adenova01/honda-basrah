@@ -21,14 +21,22 @@ class HomeController extends PageController
             'ClassName' => 'ServicePage'
         ])->first();
 
+        $katalog = Page::get()->filter([
+            'ClassName' => 'KatalogPage'
+        ])->first();
+
+        $katalogData = Katalog::get()->limit(3);
+
         return $this->customise([
             'Layout' => $this->customise([
                 'AboutUs' => $aboutUs,
                 'Service' => $service,
                 'ServiceCust' => Service::get(),
+                'Katalog' => $katalog,
+                'KatalogData' => $katalogData
             ])->renderWith('Layout/Home'),
             'Slider' => Slider::get(),
-            'Product' => Product::get(),
+            'katalog' => Katalog::get(),
             'ShowBanner' => true,
             'Segment' => '/'
         ])->renderWith('Page');

@@ -113,9 +113,7 @@
     </div> --%>
     <!-- Facts Start -->
 
-
     $Layout
-
 
     <!-- Footer Start -->
     <% include Footer %>

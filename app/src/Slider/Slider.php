@@ -56,7 +56,7 @@ class Slider extends DataObject
     public function onBeforeWrite()
     {
         parent::onBeforeWrite();
-        if(!$this->ImageSlider()->exists() && !$this->ImageSlider()->isPublished())
+        if($this->ImageSlider()->exists() && !$this->ImageSlider()->isPublished())
         {
             $this->ImageSlider()->doPublish();
         }
