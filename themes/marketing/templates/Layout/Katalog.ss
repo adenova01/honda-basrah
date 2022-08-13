@@ -48,7 +48,7 @@
                                         <% loop $KatalogImage.limit(1) %>
                                             <img class="img-fluid" src="$URL" alt="">
                                         <% end_loop %>
-                                        <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="{$BaseHref}katalog?cat=$KatalogKategori.ID">$KatalogKategori.Title</a>
+                                        <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="{$BaseHref}katalog?cat=$KatalogKategori.Title">$KatalogKategori.Title</a>
                                     </div>
                                     <div class="p-4">
                                         <div class="d-flex mb-3">

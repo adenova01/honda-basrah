@@ -341,7 +341,7 @@
                             <h4 class="mb-3">$Title</h4>
                             <%-- <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p> --%>
                             $Text
-                            <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
+                            <a class="text-uppercase" href="{$baseHref}katalog/detil/{$URLSegment}">Read More <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
