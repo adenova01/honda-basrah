@@ -13,6 +13,7 @@ class Katalog extends DataObject
     private static $db = [
         'Title' => 'Varchar',
         'Text' => 'HTMLText',
+        'URLSegment' => 'Varchar'
     ];
 
     private static $has_many = [
@@ -53,6 +54,7 @@ class Katalog extends DataObject
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();
+        $fields->removeByName('URLSegment');
         $fields->addFieldsToTab('Root.Main',
         [
             TextField::create('Title'),
@@ -77,6 +79,30 @@ class Katalog extends DataObject
             {
                 $value->doPublish();
             }
+        }
+
+        $specialChar = array('/', ':', ';', '!', '=', '(', ')', '[', ']', '{', '}', '%', '@', '$');
+        $segment = strtolower(str_replace(' ', '-', str_replace($specialChar, '', $this->Title)));
+
+        // $segment = $segment . '-' . strtolower(str_replace(' ', '-', str_replace($specialChar, '', $this->NamaPemilik)));
+        $cekSegment = Katalog::get()->filter([
+            'URLSegment' => $segment
+        ]);
+        if ($cekSegment->first()) {
+            if (
+                $this->getChangedFields('Title')['after']
+                == $this->getChangedFields('Title')['before']
+            ) {
+                $this->URLSegment = trim($segment) . '-' . ($cekSegment->max('ID') + 1);
+            }
+        } else {
+            $this->URLSegment = trim($segment);
+        }
+
+        if($this->ID == 0)
+        {
+            $segment = str_replace(' ', '-', $this->Title);
+            $this->URLSegment = trim($segment);
         }
     }
 }

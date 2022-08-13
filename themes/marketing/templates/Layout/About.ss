@@ -49,14 +49,18 @@
                         </div>
                         <div class="ps-4">
                             <h5 class="mb-2">Hubungi Saya</h5>
-                            <h4 class="text-primary mb-0">+012 345 6789</h4>
+                            <h4 class="text-primary mb-0">$SiteConfig.Phone</h4>
                         </div>
                     </div>
-                <a href="#" class="btn btn-primary py-3 px-5 mt-3 wow zoomIn" data-wow-delay="0.9s">Hubungi Sekarang</a>
+                <a href="https://api.whatsapp.com/send?phone={$SiteConfig.Phone}&text=Halo Rizal saya ingin mencari mobil." class="btn btn-primary py-3 px-5 mt-3 wow zoomIn" data-wow-delay="0.9s">Hubungi Sekarang</a>
                 </div>
                 <div class="col-lg-5" style="min-height: 500px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="$ThemeDir/img/about.jpg" style="object-fit: cover;">
+                        <% if $SiteConfig.PhotoProfile %>
+                            <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="$SiteConfig.PhotoProfile.URL" style="object-fit: cover;">
+                        <% else %>
+                            <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="$ThemeDir/img/about.jpg" style="object-fit: cover;">
+                        <% end_if %>
                     </div>
                 </div>
             </div>
