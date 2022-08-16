@@ -153,27 +153,27 @@
             </div>
             <div class="col-lg-5">
                 <div class="bg-primary rounded h-100 d-flex align-items-center p-5 wow zoomIn" data-wow-delay="0.9s">
-                    <form>
+                    <form action="{$BaseHref}home/sendMail" method="POST">
                         <div class="row g-3">
                             <div class="col-xl-12">
-                                <input type="text" class="form-control bg-light border-0" placeholder="Masukkan Nama" style="height: 55px;" required>
+                                <input type="text" class="form-control bg-light border-0" name="name" placeholder="Masukkan Nama" style="height: 55px;" required>
                             </div>
                             <div class="col-xl-12">
-                                <input type="text" class="form-control bg-light border-0" placeholder="Masukkan No Telepon" style="height: 55px;" required>
+                                <input type="text" class="form-control bg-light border-0" name="telp" placeholder="Masukkan No Telepon" style="height: 55px;" required>
                             </div>
                             <div class="col-12">
-                                <input type="email" class="form-control bg-light border-0" placeholder="Subject Pertanyaan" style="height: 55px;">
+                                <input type="text" class="form-control bg-light border-0" name="subject" placeholder="Subject Pertanyaan" style="height: 55px;">
                             </div>
                             <div class="col-12">
-                                <select class="form-select bg-light border-0" style="height: 55px;" required>
+                                <select class="form-select bg-light border-0" name="layanan" style="height: 55px;" required>
                                     <option selected readonly>Pilih Layanan</option>
                                     <% loop $ServiceCust %>
-                                    <option value="$ID">$Title</option>
+                                    <option value="$Title">$Title</option>
                                     <% end_loop %>
                                 </select>
                             </div>
                             <div class="col-12">
-                                <textarea class="form-control bg-light border-0" rows="3" placeholder="Message" required></textarea>
+                                <textarea class="form-control bg-light border-0" rows="3" name="message" placeholder="Message" required></textarea>
                             </div>
                             <div class="col-12">
                                 <button class="btn btn-dark w-100 py-3" type="submit">Kirim Pertanyaan</button>

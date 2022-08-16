@@ -24,6 +24,7 @@
             margin-top:16px;
         }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.6.1/css/iziModal.min.css" integrity="sha512-3c5WiuZUnVWCQGwVBf8XFg/4BKx48Xthd9nXi62YK0xnf39Oc2FV43lIEIdK50W+tfnw2lcVThJKmEAOoQG84Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -119,9 +120,9 @@
     <% include Footer %>
     <!-- Footer End -->
 
-    <% if $Segment == '/' %>
-        <% include Popup %>
-    <% end_if %>
+    <div id="iziModal">
+
+    </div>
 
 
     <!-- Back to Top -->
@@ -135,6 +136,7 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.6.1/js/iziModal.min.js" integrity="sha512-lR/2z/m/AunQdfBTSR8gp9bwkrjwMq1cP0BYRIZu8zd4ycLcpRYJopB+WsBGPDjlkJUwC6VHCmuAXwwPHlacww==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="$ThemeDir/lib/wow/wow.min.js"></script>
     <script src="$ThemeDir/lib/easing/easing.min.js"></script>
     <script src="$ThemeDir/lib/waypoints/waypoints.min.js"></script>
@@ -145,12 +147,41 @@
     <script src="$ThemeDir/js/main.js"></script>
     <script>
         var popUp = true;
-        $(window).on("load", function(){
-            var modalPopup = new bootstrap.Modal(document.getElementById('exampleModal'));
-            if(popUp)
-            {
-                //$('#exampleModal').modal('show');
-                popUp = false;
+        $(document).ready(function(){
+            if(sessionStorage.getItem('modal') == null){
+                $('#iziModal').iziModal({
+                    title: 'Mobil apa yang anda butuhkan ?',
+                    subtitle: 'kami siap membantu ',
+                    headerColor: '#88A0B9',
+                    background: null,
+                    theme: '',  // light
+                    icon: null,
+                    iconText: null,
+                    iconColor: '',
+                    autoOpen: true, // Boolean, Number
+                    overlay: true,
+                    overlayClose: true,
+                    overlayColor: 'rgba(0, 0, 0, 0.4)',
+                    timeoutProgressbarColor: 'rgba(255,255,255,0.5)',
+                    transitionIn: 'comingIn',
+                    transitionOut: 'comingOut',
+                    transitionInOverlay: 'fadeIn',
+                    transitionOutOverlay: 'fadeOut',
+                    onFullscreen: function(){},
+                    onResize: function(){},
+                    onOpening: function(){
+                        $.get('/home/getFormModal', function(data) {
+                            $("#iziModal .iziModal-content").html(data);
+                            modal.stopLoading();
+                        });
+                    },
+                    onOpened: function(){},
+                    onClosing: function(){
+                        sessionStorage.setItem('modal', false);
+                    },
+                    onClosed: function(){},
+                    afterRender: function(){}
+                });
             }
         })
     </script>

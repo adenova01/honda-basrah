@@ -3,6 +3,7 @@
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Assets\Image;
 use SilverStripe\Forms\FieldList;
+use SilverStripe\Forms\TextareaField;
 use SilverStripe\Forms\TextField;
 use SilverStripe\ORM\DataExtension;
 
@@ -21,7 +22,11 @@ class SiteExtension extends DataExtension
         'Facebook' => 'Varchar',
         'LinkedIn' => 'Varchar',
         'Instagram' => 'Varchar',
-        'Youtube' => 'Varchar'
+        'Youtube' => 'Varchar',
+        // -------- Meta ---------
+        'TitleWeb' => 'Varchar',
+        'Deskripsi' => 'Text',
+        'Keyword' => 'Text'
     ];
 
     private static $has_one = [
@@ -51,7 +56,7 @@ class SiteExtension extends DataExtension
             TextField::create('Host'),
             TextField::create('Port'),
             TextField::create('Username'),
-            TextField::create('password'),
+            TextField::create('Password'),
         ]);
 
         $fields->addFieldsToTab('Root.Sosmed', [
@@ -60,6 +65,12 @@ class SiteExtension extends DataExtension
             TextField::create('LinkedIn'),
             TextField::create('instagram'),
             TextField::create('Youtube'),
+        ]);
+
+        $fields->addFieldsToTab('Root.Meta', [
+            TextField::create('TitleWeb'),
+            TextareaField::create('Deskripsi'),
+            TextField::create('Keyword')
         ]);
 
         return $fields;
